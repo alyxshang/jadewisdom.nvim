@@ -27,8 +27,6 @@ end
 -- for the colorscheme's table.
 local pal = palette.palette(trans).palette
 
-print(pal)
-
 -- Returning the Lua
 -- table that the "lualine"
 -- plugin expects.
