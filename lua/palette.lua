@@ -51,8 +51,8 @@ function palettes(transparentSetting)
   }
 
   return {
-    dark = themeDarkPalette
-    light = themeLightPalette,
+    dark = themeDarkPalette,
+    light = themeLightPalette
   }
 end
 
