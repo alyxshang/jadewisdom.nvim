@@ -9,7 +9,7 @@ local palette = require("palette")
 -- function.
 local engine = require("guizhong")
 
-local config = require("jadewisdom/init")
+local config = require("jadewisdom")
 
 -- Setting the global name for
 -- the colorscheme.
