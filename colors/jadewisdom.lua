@@ -9,6 +9,8 @@ local palette = require("palette")
 -- function.
 local engine = require("guizhong")
 
+local config = require("jadewisdom/init")
+
 -- Setting the global name for
 -- the colorscheme.
 vim.g.colors_name = "jadewisdom"
@@ -20,11 +22,17 @@ vim.api.nvim_create_autocmd(
   {
     pattern = "jadewisdom",
     callback = function()
+      local transparent = false
+      if config.transparent then
+        transparent = true
+      else
+        transparent = false
+      end
       local variant = vim.o.background
       if variant == "dark" then
-        engine.setHighlights(palette.palettes(false).dark)
+        engine.setHighlights(palette.palettes(transparent).dark)
       else
-        engine.setHighlights(palette.palettes(false).light)
+        engine.setHighlights(palette.palettes(transparent).light)
       end
     end
   }
