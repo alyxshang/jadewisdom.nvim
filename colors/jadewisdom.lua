@@ -30,7 +30,7 @@ vim.api.nvim_create_autocmd(
       else
         transparent = false
       end
-      engine.setHighlights(palette.palette(transparent))
+      engine.setHighlights(palette.palette(transparent).palette)
     end
   }
 )
