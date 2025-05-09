@@ -3,7 +3,7 @@
 
 -- Defining the
 -- colorscheme's
--- color palettes.
+-- color palette.
 function palette(transparentSetting)
   local themePalette = {
     bg = "#453424",
@@ -27,6 +27,7 @@ function palette(transparentSetting)
     transparent = transparentSetting
   }
 
+  -- Returning the palette.
   return {
     palette = themePalette
   }
