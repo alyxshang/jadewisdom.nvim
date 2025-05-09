@@ -5,9 +5,29 @@
 -- color palette.
 local palette = require("palette")
 
+-- Importing any configuration
+-- options set by the user.
+local config = require("jadewisdom")
+
+-- Defining a default
+-- for the transparency
+-- setting.
+local trans = false
+
+-- Loading the configured
+-- transparency setting if
+-- any.
+if config.transparent then
+  trans = true
+else
+  trans = false
+end
+
 -- Defining a single variable
 -- for the colorscheme's table.
-local pal = palette.palette
+local pal = palette.palette(trans).palette
+
+print(pal)
 
 -- Returning the Lua
 -- table that the "lualine"
