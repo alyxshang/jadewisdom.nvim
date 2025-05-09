@@ -35,6 +35,9 @@ return {
     'alyxshang/guizhong.nvim'
   },
   config = function()
+    -- Setting the transparency setting.
+    -- Can be set to "true" or "false".
+    require("jadewisdom").setup({ transparent = true })
     vim.cmd.colorscheme("jadewisdom")
   end
 }
@@ -46,6 +49,10 @@ return {
 
 - Initial release.
 - Upload to GitHub.
+
+### Version 0.2.0
+
+- Added support for making the background transparent.
 
 ## NOTE :scroll:
 
