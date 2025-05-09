@@ -1,7 +1,7 @@
 -- JADEWISDOM.NVIM by Alyx Shang.
 -- Licensed under the FSL v1.
 
--- Importing the color palette
+-- Importing the color palettes
 -- defined for this colorscheme.
 local palette = require("palette")
 
@@ -20,7 +20,12 @@ vim.api.nvim_create_autocmd(
   {
     pattern = "jadewisdom",
     callback = function()
-      engine.setHighlights(palette.palette)
+      local variant = vim.o.background
+      if variant == "dark" then
+        engine.setHighlights(palette.palettes(false).dark)
+      else
+        engine.setHighlights(palette.palettes(false).light)
+      end
     end
   }
 )
