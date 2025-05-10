@@ -2,8 +2,12 @@
 -- Licensed under the FSL v1.
 
 -- Defining the
+-- function to obtain the
 -- colorscheme's
--- color palette.
+-- color palette
+-- and making it possible
+-- to define a transparency
+-- parameter.
 function palette(transparentSetting)
   local themePalette = {
     bg = "#453424",
@@ -35,7 +39,7 @@ end
 
 -- Exporting the function
 -- for obtaining the 
--- theme's color palettes.
+-- theme's color palette.
 return {
   palette = palette
 }
